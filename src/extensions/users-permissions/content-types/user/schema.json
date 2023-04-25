@@ -77,6 +77,18 @@
       "relation": "manyToMany",
       "target": "api::movie.movie",
       "mappedBy": "users"
+    },
+    "likes": {
+      "type": "json"
+    },
+    "dislikes": {
+      "type": "json"
+    },
+    "vistas": {
+      "type": "json"
+    },
+    "pendientes": {
+      "type": "json"
     }
   }
 }

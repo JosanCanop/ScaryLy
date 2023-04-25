@@ -41,6 +41,12 @@
       "relation": "oneToMany",
       "target": "api::comment.comment",
       "mappedBy": "movie"
+    },
+    "TotalLikes": {
+      "type": "integer"
+    },
+    "TotalDislikes": {
+      "type": "integer"
     }
   }
 }
