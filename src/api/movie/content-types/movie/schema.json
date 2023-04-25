@@ -24,12 +24,6 @@
     "image": {
       "type": "string"
     },
-    "users": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "plugin::users-permissions.user",
-      "inversedBy": "movies"
-    },
     "genres": {
       "type": "relation",
       "relation": "manyToMany",
@@ -47,6 +41,30 @@
     },
     "TotalDislikes": {
       "type": "integer"
+    },
+    "userslikes": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "likes"
+    },
+    "usersdislikes": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "dislikes"
+    },
+    "userstowatch": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "plugin::users-permissions.user",
+      "mappedBy": "towatch"
+    },
+    "userwatched": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "plugin::users-permissions.user",
+      "mappedBy": "watched"
     }
   }
 }

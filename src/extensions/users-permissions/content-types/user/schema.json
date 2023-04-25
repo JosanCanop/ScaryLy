@@ -72,23 +72,29 @@
     "surname": {
       "type": "string"
     },
-    "movies": {
+    "towatch": {
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::movie.movie",
-      "mappedBy": "users"
+      "inversedBy": "userstowatch"
     },
     "likes": {
-      "type": "json"
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::movie.movie",
+      "inversedBy": "userslikes"
     },
     "dislikes": {
-      "type": "json"
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::movie.movie",
+      "inversedBy": "usersdislikes"
     },
-    "vistas": {
-      "type": "json"
-    },
-    "pendientes": {
-      "type": "json"
+    "watched": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::movie.movie",
+      "inversedBy": "userwatched"
     }
   }
 }
