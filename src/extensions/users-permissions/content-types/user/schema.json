@@ -95,6 +95,12 @@
       "relation": "manyToMany",
       "target": "api::movie.movie",
       "inversedBy": "userwatched"
+    },
+    "comments": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::comment.comment",
+      "mappedBy": "user"
     }
   }
 }
